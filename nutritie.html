@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitAtoms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <header>
+      <a href="imgg.png" class="logo"><img src="imgg.png" alt="Logo"></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="#">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">More <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="exercitii.html">Exercises</a></li>
+              <li class="sub-item"><a href="nutritie.html">Nutrition</a></li>
+              <li class="sub-item"><a href="jokes.html">Jokes</a></li>
+            </ul>
+            
+          
+          <li class="menu-item"><a href="#">Services</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+      <h1>Nutrition</h1>
+    </section>
+    <section class="section-two">
+        <h2>All about<br>Nutrition</h2>
+        <p><strong>Unlocking Your Full Potential: The Comprehensive Guide to Gym Nutrition</strong> Embarking on a fitness journey is not only about lifting weights and breaking a sweat; it's equally about fueling your body with the right nutrients to maximize your efforts and achieve your fitness goals. Gym nutrition is a crucial component that can significantly impact your performance, recovery, and overall well-being. In this comprehensive guide, we'll explore the fundamental principles of gym nutrition and how you can harness the power of food to elevate your fitness experience. 1. The Foundation: Understanding Macronutrients a. Proteins: Proteins are the building blocks of muscle tissue. Incorporate lean protein sources like chicken, fish, eggs, beans, and tofu into your diet. Aim for a balanced intake to support muscle repair and growth. b. Carbohydrates: Carbohydrates are your body's primary energy source. Opt for complex carbohydrates such as whole grains, fruits, and vegetables. They provide sustained energy for intense workouts and aid in glycogen replenishment. c. Fats: Healthy fats play a crucial role in hormone production and joint health. Include sources like avocados, nuts, seeds, and olive oil in moderation. Balancing your fat intake is essential for overall well-being. 2. Pre-Workout Nutrition: Fueling the Engine a. Timing: Consume a balanced meal 2-3 hours before your workout, consisting of carbohydrates, proteins, and a small amount of fats. For a quick snack closer to your session, opt for easily digestible carbs and a source of protein. b. Hydration: Proper hydration is key for optimal performance. Drink water throughout the day and consider consuming a pre-workout beverage containing electrolytes to support hydration and prevent muscle cramps.</p>
+        <p>3. During Your Workout: Staying Energized a. Hydration Continues: Sip water regularly during your workout to stay hydrated. If engaging in prolonged or intense exercise, consider a sports drink to replenish electrolytes. b. Intra-Workout Snack: For longer sessions, include a small, easily digestible snack with a combination of carbohydrates and electrolytes to sustain energy levels. 4. Post-Workout Recovery: Repair and Replenish a. Protein Intake: Consume a protein-rich meal or shake within 30 minutes of completing your workout. This aids in muscle repair and kickstarts the recovery process. b. Carbohydrate Replenishment: Include carbohydrates to replenish glycogen stores. A mix of protein and carbohydrates supports recovery and reduces muscle soreness.</p>
+        <p>5. Everyday Nutrition Habits a. Meal Timing: Maintain regular meals and snacks throughout the day to provide a steady stream of nutrients. Aim for a balance of macronutrients in each meal. b. Micronutrients: Don't overlook the importance of vitamins and minerals. Include a variety of colorful fruits and vegetables to ensure a broad spectrum of essential nutrients. c. Supplements: While food should be your primary source of nutrients, supplements can complement your diet. Consult with a nutritionist to determine if supplements like protein powder, omega-3 fatty acids, or multivitamins are beneficial for you. 6. Individualized Nutrition Plans a. Consultation: Consider consulting with a registered dietitian or nutritionist to create a personalized nutrition plan based on your fitness goals, dietary preferences, and health considerations. b. Adjustments Over Time:As your fitness goals evolve, so should your nutrition plan. Periodically reassess your dietary needs and make adjustments to align with your current objectives.</p>
+        <p>In conclusion, gym nutrition is a dynamic and integral part of your fitness journey. By understanding and implementing these principles, you empower yourself to achieve peak performance, support recovery, and maintain overall well-being. Remember, nutrition is a tool to amplify your efforts in the gym, helping you unlock your full potential and reach new heights in your fitness endeavors.</p>
+    </section>
+    <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+    </script>
+
+  </body>
+</html>    

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitAtoms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <header>
+        <a href="imgg.png" class="logo"><img src="imgg.png" alt="Logo"></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">More <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="exercitii.html">Exercises</a></li>
+              <li class="sub-item"><a href="nutritie.html">Nutrition</a></li>
+              <li class="sub-item"><a href="jokes.html">Jokes</a></li>
+            </ul>
+            
+          
+          <li class="menu-item"><a href="#">Services</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+        <h1>Exercises</h1>
+      </section>
+      <section class="section-two">
+        <h2>All about<br>exercises</h2>
+        <p>The push-pull-legs (PPL) workout routine is a popular and effective way to organize your training sessions. It divides your exercises into three main categories: push exercises, pull exercises, and leg exercises. This type of split is known for providing a balanced and comprehensive approach to working different muscle groups. Here's an overview of each category along with examples of exercises:</p>
+        <p><strong>Exercises:</strong> Push exercises primarily target the muscles involved in pushing movements, such as chest, shoulders, and triceps.Barbell Bench Press: Targets chest, shoulders, and triceps.Dumbbell Shoulder Press: Focuses on shoulder development.Incline Dumbbell Press: Emphasizes the upper chest.Tricep Dips: Targets the triceps.Overhead Tricep Extension: Isolates the triceps.</p>
+        <p><strong>Pull Exercises:</strong> Pull exercises work muscles involved in pulling movements, mainly targeting the back, biceps, and rear shoulders. Pull-Ups/Chin-Ups: Great for overall back development. Bent Over Rows: Targets the mid-back. Lat Pulldowns: Focuses on the latissimus dorsi muscles. Face Pulls: Works the rear shoulders. Bicep Curls: Isolates the biceps.</p>
+        <p><strong>Leg Exercises:</strong>Leg exercises concentrate on lower body muscle groups, including quadriceps, hamstrings, glutes, and calves.Squats (Back Squats, Front Squats): Targets quads, hamstrings, and glutes.
+Deadlifts (Conventional, Sumo): Works the entire posterior chain. Lunges (Walking Lunges, Reverse Lunges): Engages quads and glutes. Leg Press: Focuses on quadriceps and glutes. Calf Raises: Isolates the calf muscles.</p>
+      </section>
+
+      <script type="text/javascript">
+        //jquery for toggle dropdown menus
+        $(document).ready(function(){
+          //toggle sub-menus
+          $(".sub-btn").click(function(){
+            $(this).next(".sub-menu").slideToggle();
+          });
+    
+          //toggle more-menus
+          $(".more-btn").click(function(){
+            $(this).next(".more-menu").slideToggle();
+          });
+        });
+    
+        //javascript for the responsive navigation menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+    
+        menuBtn.addEventListener("click", () => {
+          menu.classList.add("active");
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+    
+        //javascript for the navigation bar effects on scroll
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        </script>
+    
+      </body>
+    </html>

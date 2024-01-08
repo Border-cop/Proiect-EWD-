@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitAtoms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <header>
+      <a href="imgg.png" class="logo"><img src="imgg.png" alt="Logo"></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="#">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">More <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="exercitii.html">Exercises</a></li>
+              <li class="sub-item"><a href="nutritie.html">Nutrition</a></li>
+              <li class="sub-item"><a href="jokes.html">Jokes</a></li>
+            </ul>
+            
+          
+          <li class="menu-item"><a href="#">Services</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+      <h1>Home</h1>
+    </section>
+    <section class="section-two">
+      <h2>All about<br>Fit Atoms</h2>
+      <p> Unleash Your Potential with Fit Atoms Gym. Ladies and gentlemen, esteemed guests, and fitness enthusiasts, thank you for joining me today as we delve into a world of wellness, strength, and transformation. Today, I want to share with you the compelling reasons why joining FitAtoms gym is not just a commitment to physical fitness but a journey toward a better, healthier version of yourself.  **1. Holistic Approach to Health: Fit Atoms gym is not just a place to lift weights or run on a treadmill. It's a haven for a holistic approach to health. Our state-of-the-art facilities offer a diverse range of equipment and classes, catering to every aspect of your fitness journey. From strength training and cardiovascular workouts to yoga and nutrition counseling, we provide a comprehensive solution for your physical and mental well-being. **2. Expert Guidance: One of the cornerstones of Fit Atoms is our team of experienced and certified fitness professionals. Our trainers are not just instructors; they are mentors dedicated to understanding your unique goals and crafting personalized workout plans. Whether you are a beginner or an experienced athlete, our experts are here to guide you, motivate you, and ensure that you reach your full potential.</p>
+      <p>**3. Community and Support: Embarking on a fitness journey is more than just lifting weights or hitting the gym. It's about being part of a community that supports and uplifts each other. At FitAtoms, we foster a sense of camaraderie, where members encourage and inspire one another. The friendships formed here extend beyond the gym, creating a network of support that becomes an integral part of your healthy lifestyle. **4. Cutting-Edge Facilities: FitAtoms invests in the latest fitness technology and equipment to ensure that our members have access to cutting-edge facilities. From high-quality strength training machines to virtual fitness classes, we strive to keep our facilities up-to-date, offering you an environment that is both motivating and effective.</p>
+      <p>**5. Customized Fitness Programs: We understand that everyone's fitness journey is unique. That's why Fit Atoms offers customized fitness programs tailored to your specific needs and goals. Whether you're aiming for weight loss, muscle gain, or overall well-being, our trainers work with you to create a roadmap that fits your lifestyle. **6. Focus on Mental Wellness: At Fit Atoms, we recognize that a healthy mind is just as important as a healthy body. Our gym provides opportunities for mindfulness, stress relief, and relaxation. From yoga and meditation classes to wellness workshops, we emphasize the connection between physical and mental wellness, helping you achieve a balanced and fulfilling life.</p>
+      <p>**7. Flexibility in Scheduling: Life is busy, and we understand that. Fit Atoms gym offers flexible scheduling options to accommodate even the most hectic lifestyles. With early morning, late evening, and weekend hours, we make it convenient for you to prioritize your health without compromising on your other commitments. In conclusion, FitAtoms is not just a gym; it's a lifestyle choice. It's a commitment to your health, a journey toward self-improvement, and an investment in a happier, more fulfilled life. Join us at FitAtoms, where every drop of sweat, every lift of the barbell, and every step on the treadmill brings you closer to the best version of yourself. Thank you, and let's embark on this transformative journey together!</p>
+    </section>
+
+    <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitAtoms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <header>
+        <a href="imgg.png" class="logo"><img src="imgg.png" alt="Logo"></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">More <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="exercitii.html">Exercises</a></li>
+              <li class="sub-item"><a href="nutritie.html">Nutrition</a></li>
+              <li class="sub-item"><a href="jokes.html">Jokes</a></li>
+            </ul>
+            
+          
+          <li class="menu-item"><a href="#">Services</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+        <h1>Jokes</h1>
+      </section>
+      <section class="section-two">
+        <h2>Just<br>Jokes</h2>
+        <p> 
+            
+            
+            Why did the chemist go to the gym?<br>
+            
+            To get more buffer strength!<br>
+            What did the gym instructor say to the element trying to lift weights?<br>
+            
+            "You need to work on your reps, you're too inert!"<br>
+            How do chemists stay in shape?<br>
+            
+            They use their periodic table regularly.<br>
+            Why did the proton go to the gym?<br>
+            
+            It wanted to be positively charged!<br>
+            Why did the chemistry teacher bring a ladder to the gym?<br>
+            
+            To reach the higher pH levels!<br>
+            What's a chemist's favorite exercise?<br>
+            
+            The element workout!<br>
+            How do you organize a fantastic chemistry workout?<br>
+            
+            With periodic training!<br>
+            Why did the chemistry book start working out?<br>
+            
+            It wanted to get in better shape for the shelf!<br>
+            What do you call a chemist who can bench-press an entire lab setup?<br>
+            
+            Strong-ion!<br>
+            Why did the chemist break up with the gym?<br>
+            
+            It couldn't find the right "element" of motivation!<br>
+            How do you spot a chemist in the gym?<br>
+            
+            They're the ones always checking the chemical composition of protein shakes.<br>
+            Why did the chemistry teacher become a fitness instructor?<br>
+            
+            They wanted to teach about balancing equations and bodies!<br>
+            What did the chemist say to the molecule at the gym?<br>
+            
+            "You've got good bonds, keep it up!"<br>
+            How do chemists stay cool during a workout?<br>
+            
+            They have a fan named Helium!<br>
+            What's a chemist's favorite exercise equipment?<br>
+            
+            The periodic elliptical!<br>
+            Why did the chemistry professor bring a beaker to the gym?<br>
+            
+            To measure their fitness level!<br>
+            What did the gym trainer say to the chemist lifting weights?<br>
+            
+            "You've got some strong chemical bonds there!"<br>
+            Why did the chemist refuse to work out with metal weights?<br>
+            
+            They preferred molecular weights!<br>
+            How does a chemist express excitement during a workout?<br>
+            
+            "I'm feeling positively charged today!"<br>
+            Why do chemists love leg day at the gym?<br>
+            
+            It's a chance to exercise their atomic legs!<br>
+            Remember, humor is subjective, and these jokes are meant for a lighthearted take on chemistry and fitness. Enjoy the laughter and keep those chemistry puns rolling!</p>
+      </section>
+
+      <script type="text/javascript">
+        //jquery for toggle dropdown menus
+        $(document).ready(function(){
+          //toggle sub-menus
+          $(".sub-btn").click(function(){
+            $(this).next(".sub-menu").slideToggle();
+          });
+    
+          //toggle more-menus
+          $(".more-btn").click(function(){
+            $(this).next(".more-menu").slideToggle();
+          });
+        });
+    
+        //javascript for the responsive navigation menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+    
+        menuBtn.addEventListener("click", () => {
+          menu.classList.add("active");
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+    
+        //javascript for the navigation bar effects on scroll
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        </script>
+    
+      </body>
+    </html>

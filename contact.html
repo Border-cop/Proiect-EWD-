@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitAtoms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <header>
+      <a href="imgg.png" class="logo"><img src="imgg.png" alt="Logo"></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">More <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="exercitii.html">Exercises</a></li>
+              <li class="sub-item"><a href="nutritie.html">Nutrition</a></li>
+              <li class="sub-item"><a href="jokes.html">Jokes</a></li>
+            </ul>
+            
+          
+          <li class="menu-item"><a href="#">Services</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+      <h1>Contact us</h1>
+    </section>
+    <section class="section-two">
+      <h2>Got an idea?<br>Contact us now !</h2>
+      <section class="section-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" required></textarea>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <p></p>
+
+    </section>
+
+    <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+    </script>
+
+  </body>
+</html>
